@@ -14,18 +14,23 @@ public class Historial {
 		this.puntajeHistorial = puntajeHistorial;
 		this.idEjercicio = idEjercicio;
 	}
+	
 	public Date getFechahistorial() {
 		return fechahistorial;
 	}
+	
 	public int getTiempoHistorrial() {
 		return tiempoHistorrial;
 	}
+	
 	public int getPuntajeHistorial() {
 		return puntajeHistorial;
 	}
+	
 	public int getIdEjercicio() {
 		return idEjercicio;
 	}
+	
 	@Override
 	public String toString() {
 		return fechahistorial 
