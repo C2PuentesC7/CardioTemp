@@ -40,13 +40,13 @@ public class FrmListaEjercicios extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
-		
+
 		JLabel lblEditarListaDe = new JLabel("Editar Lista de Ejercicios");
 		contentPane.add(lblEditarListaDe, BorderLayout.NORTH);
-		
+
 		JButton btnVolver = new JButton("Volver");
 		contentPane.add(btnVolver, BorderLayout.SOUTH);
-		
+
 		JPanel panel = new JPanel();
 		panel.setBorder(new TitledBorder(null, "Lista Ejercicios", TitledBorder.LEADING, TitledBorder.TOP, null, null));
 		contentPane.add(panel, BorderLayout.CENTER);
