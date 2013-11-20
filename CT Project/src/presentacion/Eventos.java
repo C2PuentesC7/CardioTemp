@@ -10,9 +10,9 @@ import java.util.Date;
 
 import javax.swing.JOptionPane;
 
-import Logica.Ejercicio;
-import Logica.Gestion;
-import Logica.Historial;
+import logica.Ejercicio;
+import logica.Gestion;
+import logica.Historial;
 
 public class Eventos implements ActionListener{
 

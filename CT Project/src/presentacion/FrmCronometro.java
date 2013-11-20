@@ -11,8 +11,8 @@ import javax.swing.border.TitledBorder;
 import javax.swing.JButton;
 import javax.swing.UIManager;
 
-import Logica.Ejercicio;
-import Logica.Gestion;
+import logica.Ejercicio;
+import logica.Gestion;
 
 import java.awt.GridLayout;
 import javax.swing.SwingConstants;

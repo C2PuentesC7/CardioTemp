@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JScrollBar;
 import javax.swing.border.TitledBorder;
 
-import Logica.Rutina;
+import logica.Rutina;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 

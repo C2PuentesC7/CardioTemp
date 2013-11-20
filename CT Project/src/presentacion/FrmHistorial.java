@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 import javax.swing.border.TitledBorder;
 import javax.swing.JButton;
 
-import Logica.Historial;
+import logica.Historial;
 
 import java.awt.GridLayout;
 import java.awt.Font;

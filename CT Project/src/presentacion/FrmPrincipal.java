@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.border.TitledBorder;
 
-import Logica.Gestion;
+import logica.Gestion;
 import javax.swing.SwingConstants;
 import java.awt.Font;
 
