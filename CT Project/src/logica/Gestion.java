@@ -1,4 +1,4 @@
-package Logica;
+package logica;
 import java.awt.GraphicsConfiguration;
 import java.sql.Date;
 import java.util.ArrayList;
