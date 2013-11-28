@@ -18,17 +18,19 @@ public class Gestion {
 		//valoresPorDefecto();
 		
 		ArrayList<Object> lista = Archivos.cargarDatos();
+		if (lista == null){
 		ejercicios = (ArrayList<Ejercicio>) lista.get(0);
 		logros = (ArrayList<Logro>) lista.get(1);
 		tips = (ArrayList<Tip>) lista.get(2);
 		rutinas = (ArrayList<Rutina>) lista.get(3);
 		historials = (ArrayList<Historial>) lista.get(4); 
+		}else valoresPorDefecto();
 	
 	}
 
 	private void valoresPorDefecto() {
 		ejercicios = new ArrayList<Ejercicio>();
-		ejercicios.add(new Ejercicio(0, "Caminata", "Hagamos de cuenta que caminar es la acción de poner un pie frente al otro, de manera de que el Ser humano, animal o cosa que tenga pies o patas, pueda movilizarse de un determinado lugar a otro", 1, new ImageIcon(getClass().getResource("/Imagenes/Ej0.jpg"))));
+		ejercicios.add(new Ejercicio(0, "Caminata", "Hagamos de cuenta que caminar es la acciï¿½n de poner un pie frente al otro, de manera de que el Ser humano, animal o cosa que tenga pies o patas, pueda movilizarse de un determinado lugar a otro", 1, new ImageIcon(getClass().getResource("/Imagenes/Ej0.jpg"))));
 		ejercicios.add(new Ejercicio(1, "Abdominales", "Dolor", 5, new ImageIcon(getClass().getResource("/Imagenes/Ej1.jpg"))));
 		ejercicios.add(new Ejercicio(2, "Flexiones", "Aaahh un hombre lagarto...", 4, new ImageIcon(getClass().getResource("/Imagenes/Ej2.jpg"))));
 		ejercicios.add(new Ejercicio(3, "Correr", "Como caminar pero con turbo", 2, new ImageIcon(getClass().getResource("/Imagenes/Ej3.jpg"))));
