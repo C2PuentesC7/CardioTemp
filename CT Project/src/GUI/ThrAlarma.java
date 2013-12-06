@@ -1,9 +1,8 @@
 package GUI;
 
-import java.util.Date;
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
 import Logica.Rutina;
@@ -22,12 +21,12 @@ public class ThrAlarma extends Thread{
 				e.printStackTrace();
 			}
 			GregorianCalendar fecha = new GregorianCalendar();
-			fecha.get(fecha.DAY_OF_WEEK);
+			fecha.get(Calendar.DAY_OF_WEEK);
 			for (int i = 0; i < rutinas.length; i++)
 				for (int j = 0; j < 7; j++)
 					if (rutinas[i].getDiaAlarma()[j]
-							&& rutinas[i].getHoraAlarma()[0] == fecha.get(fecha.HOUR_OF_DAY)
-							&& rutinas[i].getHoraAlarma()[1] == fecha.get(fecha.MINUTE))
+							&& rutinas[i].getHoraAlarma()[0] == fecha.get(Calendar.HOUR_OF_DAY)
+							&& rutinas[i].getHoraAlarma()[1] == fecha.get(Calendar.MINUTE))
 						JOptionPane.showMessageDialog(null, "Hora de rutina "+rutinas[i]);
 		}
 	}
