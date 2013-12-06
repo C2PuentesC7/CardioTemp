@@ -6,22 +6,20 @@ import javax.swing.ImageIcon;
 
 
 public class Tip implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int idTip;
 	private String descripcionTip;
-	private ImageIcon imagen;
-	private int idEjercicio;
-
-	public Tip(int idTip, String descripcionTip, ImageIcon imagen,
-			int idEjercicio) {
+	private String dirImagen;
+	private String tipoTip;
+	public Tip(int idTip, String tipoTip,String descripcionTip, String dirImagen) {
 		super();
 		this.idTip = idTip;
+		this.tipoTip = tipoTip;
 		this.descripcionTip = descripcionTip;
-		this.imagen = imagen;
-		this.idEjercicio = idEjercicio;
-	}
-
-	public int getidEjercicio() {
-		return idEjercicio;
+		this.dirImagen = dirImagen;
 	}
 
 	public int getIdTip() {
@@ -30,12 +28,16 @@ public class Tip implements Serializable{
 	public String getDescripcionTip() {
 		return descripcionTip;
 	}
+	
+	public String getTipoTip() {
+		return tipoTip;
+	}
 	public Image getImagenTip() {
-		return imagen.getImage();
+		return new ImageIcon(getClass().getResource(dirImagen)).getImage();
 	}
 	@Override
 	public String toString() {
 		return idTip + "-"
-				+ "\n" + descripcionTip ;
+				+tipoTip + "\n" + descripcionTip ;
 	}
 }

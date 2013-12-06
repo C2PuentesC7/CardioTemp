@@ -1,7 +1,5 @@
 package Logica;
-import java.awt.GraphicsConfiguration;
 import java.io.Serializable;
-import java.sql.Date;
 import java.util.ArrayList;
 
 
@@ -59,7 +57,15 @@ public void setNivel(int nivel) {
 		ejercicios = lista;
 	}
 	public String toString() {
-		return "Rutina " + idRutina + "> " + " Nvl " + nivel + " N° Eje: " + ejercicios.size();
+		return "Rutina " + idRutina + "\nNivel: " + nivel + "\nEjercicios: " + listaEjercicios();
+	}
+	public String listaEjercicios(){
+		String ejs = "";
+		for (int i = 0; i < ejercicios.size(); i++) {
+			ejs+=ejercicios.get(i).getNombreEjercicio()+"\n";
+		}
+		return ejs;
+		
 	}
 	public Ejercicio[] listarEjercicios() {
 		Object[] lista = ejercicios.toArray();

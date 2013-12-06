@@ -5,19 +5,23 @@ import java.io.Serializable;
 import javax.swing.ImageIcon;
 public class Ejercicio implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int idEjercicio;
 	private String nombreEjercicio;
 	private String descripcionEjercicio;
 	private int puntajeBase;
-	private ImageIcon imagen;
+	private String dirImagen;
 	public Ejercicio(int idEjercicio, String nombreEjercicio,
-			String descripcionEjercicio, int puntajeBase, ImageIcon imagen) {
+			String descripcionEjercicio, int puntajeBase, String dirImagen) {
 		super();
 		this.idEjercicio = idEjercicio;
 		this.nombreEjercicio = nombreEjercicio;
 		this.descripcionEjercicio = descripcionEjercicio;
 		this.puntajeBase = puntajeBase;
-		this.imagen = imagen;
+		this.dirImagen = dirImagen;
 	}
 	public int getIdEjercicio() {
 		return idEjercicio;
@@ -32,7 +36,7 @@ public class Ejercicio implements Serializable{
 		return puntajeBase;
 	}
 	public Image getImagenEjercicio() {
-		return imagen.getImage();
+		return new ImageIcon(getClass().getResource(dirImagen)).getImage();
 	}
 	@Override
 	public String toString() {

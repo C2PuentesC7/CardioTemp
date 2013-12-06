@@ -18,7 +18,7 @@ public class Gestion {
 		//valoresPorDefecto();
 		
 		ArrayList<Object> lista = Archivos.cargarDatos();
-		if (lista == null){
+		if (!lista.isEmpty()){
 		ejercicios = (ArrayList<Ejercicio>) lista.get(0);
 		logros = (ArrayList<Logro>) lista.get(1);
 		tips = (ArrayList<Tip>) lista.get(2);
@@ -30,26 +30,35 @@ public class Gestion {
 
 	private void valoresPorDefecto() {
 		ejercicios = new ArrayList<Ejercicio>();
-		ejercicios.add(new Ejercicio(0, "Caminata", "Hagamos de cuenta que caminar es la acciï¿½n de poner un pie frente al otro, de manera de que el Ser humano, animal o cosa que tenga pies o patas, pueda movilizarse de un determinado lugar a otro", 1, new ImageIcon(getClass().getResource("/Imagenes/Ej0.jpg"))));
-		ejercicios.add(new Ejercicio(1, "Abdominales", "Dolor", 5, new ImageIcon(getClass().getResource("/Imagenes/Ej1.jpg"))));
-		ejercicios.add(new Ejercicio(2, "Flexiones", "Aaahh un hombre lagarto...", 4, new ImageIcon(getClass().getResource("/Imagenes/Ej2.jpg"))));
-		ejercicios.add(new Ejercicio(3, "Correr", "Como caminar pero con turbo", 2, new ImageIcon(getClass().getResource("/Imagenes/Ej3.jpg"))));
-		ejercicios.add(new Ejercicio(4, "Levantar pesas", "Si si, las esposas de los peces", 3,new ImageIcon(getClass().getResource( "/Imagenes/Ej4.jpg"))));
+		ejercicios.add(new Ejercicio(0, "Caminata enérgica", "Produce excelentes resultados, si caminas con un paso rapido podrás caminar 4.5 millas en una hora y podras quemar la misma cantidad de calorias.", 1, "/Imagenes/images.jpg"));
+		ejercicios.add(new Ejercicio(1, "Flexiones", "Pongase boca a bajo y flexione los brazos casi hasta tocar el suelo y expire y vuelva a la posicion inicial inspire", 5, "/Imagenes/pectorales.jpg"));
+		ejercicios.add(new Ejercicio(2, "Abdominales", "posicion acostado boca arriba, manos en la nuca flexione 90 grados hasta una posicion de estar sentado", 4, "/Imagenes/abdominales.jpg"));
+		ejercicios.add(new Ejercicio(3, "Correr", "Correr quema hasta 300 calorías en 30 minutos, y lo puedes hacer en cualquier lado y no necesitas mas que unos buenos tennis.", 2, "/Imagenes/Correr.jpg"));
+		ejercicios.add(new Ejercicio(4, "Levantar pesas", "Con una rutina de pesas para todo el cuerpo, con repeticiones altas y bajo peso estarás quemando grasa muscular.", 3,"/Imagenes/Pesas.jpg"));
 
 		logros = new ArrayList<Logro>();
-		logros.add(new Logro(0, "Un dia normal", 10, (Ejercicio) ejercicios.get(0)));
-		logros.add(new Logro(1, "hey, sin marcahas", 20, (Ejercicio) ejercicios.get(0)));
-		logros.add(new Logro(2, "ay si, ay si, ahora se cree fortachon", 30, (Ejercicio) ejercicios.get(3)));
-		logros.add(new Logro(3, "Montolla come chitos al lado", 40, (Ejercicio) ejercicios.get(1)));
-		logros.add(new Logro(4, "Hombre elastico, cada dia mas cerca", 50, (Ejercicio) ejercicios.get(4)));
-		logros.add(new Logro(5, "Mira mis chocolatinas", 60, (Ejercicio) ejercicios.get(2)));
+		logros.add(new Logro(0, "Has sobrepasado el nivel 1!!!", 10, (Ejercicio) ejercicios.get(0)));
+		logros.add(new Logro(1, "Has sobrepasado el nivel 2!!!", 20, (Ejercicio) ejercicios.get(0)));
+		logros.add(new Logro(2, "Has sobrepasado el nivel 3!!!", 30, (Ejercicio) ejercicios.get(3)));
+		logros.add(new Logro(3, "Has sobrepasado el nivel 4!!!", 40, (Ejercicio) ejercicios.get(1)));
+		logros.add(new Logro(4, "Has sobrepasado el nivel 5!!!", 50, (Ejercicio) ejercicios.get(4)));
+		logros.add(new Logro(5, "Has sobrepasado el nivel 6!!!", 60, (Ejercicio) ejercicios.get(2)));
 
 		tips = new ArrayList<Tip>();
-		tips.add(new Tip(0, "Ojo, los chiflones estan al asecho", new ImageIcon(getClass().getResource( "/Imagenes/Tp0.jpg")), 0));
-		tips.add(new Tip(1, "Las Zanahorias son buenas para tu vision laser", new ImageIcon(getClass().getResource( "/Imagenes/Tp1.jpg")), 1));
-		tips.add(new Tip(2, "Se a demostrado cientificamente que comer quita el hambre", new ImageIcon(getClass().getResource( "/Imagenes/Tp2.jpg")), 1));
-		tips.add(new Tip(3, "Ir a mirar la nevera para ver que hay de comer no cuenta como ejercicio", new ImageIcon(getClass().getResource( "/Imagenes/Tp3.jpg")), 2));
-
+		
+		tips.add(new Tip(14, "Tip de Salud","El brócoli reduce el riesgo de cáncer", "/Imagenes/brocoli.png"));
+		tips.add(new Tip(15, "Tip de Salud","Para calmar el dolor de cabeza, presione con dos dedos el puente de su nariz, debajo de la línea de las cejas", "/Imagenes/dolorcabeza.png"));
+		tips.add(new Tip(16, "Tip de Salud","Manten tu mente activa resolviendo rompecabezas", "/Imagenes/rompecabezas.png"));
+		tips.add(new Tip(17, "Tip de Salud","Asegurese de salir con sus amigos al menos una vez a la semana y disminuira el estrés", "/Imagenes/amigos.png"));
+		tips.add(new Tip(18, "Tip de Salud","Ejercitar hasta sudar por una hora a la semana reduce el riesgo de un ataque al corazón", "/Imagenes/sudar.png"));
+		tips.add(new Tip(19, "Tip de Salud","Cámbiate al té verde es anticancerígeno", "/Imagenes/te verde.png"));
+		tips.add(new Tip(20, "Tip de Salud","Saltarse un tiempo de comida hace que el cuerpo entre en modo de hambre y almacene grasas", "/Imagenes/comida.png"));
+		tips.add(new Tip(21, "Tip de Salud","Dormir bien disminuye el riesgo de padecer cáncer de mama", "/Imagenes/dormir.png"));
+		tips.add(new Tip(22, "Tip de Salud","En vez de comer chocolate para ganar energía, come un banano, que fortalece tus huesos.", "/Imagenes/banano.png"));
+		tips.add(new Tip(23, "Tip de Salud","Comer manzanas ayuda a regular el ritmo intestinal", "/Imagenes/manzana.png"));
+		tips.add(new Tip(24, "Tip de Salud","El aceite de oliva ayuda a prevenir enfermedades cardiovasculares y mantiene nivelado el colesterol", "/Imagenes/aceiteoliva.png"));
+		tips.add(new Tip(25, "Tip de Salud","Es mejor ejercitarse en la mañana", "/Imagenes/ejercicio.png"));
+		
 		rutinas = new ArrayList<Rutina>();
 		ArrayList<Ejercicio> lista = new ArrayList<Ejercicio>();
 		lista.add(ejercicios.get(0));
@@ -79,6 +88,7 @@ public class Gestion {
 		lista.add(historials);
 		Archivos.descargarDatos(lista);
 	}
+	
 
 	// Gestion Ejercicio
 	// Solo lectura Us
@@ -94,12 +104,14 @@ public class Gestion {
 	// Expandir Gestion Us
 
 
-	public void editarAlarma(int idRutina, boolean[] diaAlarma, int[] horaAlarma){
-		for (int i = 0; i < rutinas.size(); i++) 
+	public boolean editarAlarma(int idRutina, boolean[] diaAlarma, int[] horaAlarma){
+		for (int i = 0; i < rutinas.size(); i++) {
 			if (((Rutina) rutinas.get(i)).getIdRutina() == idRutina){
 				((Rutina) rutinas.get(i)).setDiaAlarma(diaAlarma);
 				((Rutina) rutinas.get(i)).setHoraAlarma(horaAlarma);
-			}
+		}
+		}
+		return false;
 	}
 	public void removerAlarma (int idRutina){
 		for (int i = 0; i < rutinas.size(); i++)
@@ -124,7 +136,7 @@ public class Gestion {
 	// Consultar registros --> Logros
 	public Historial buscarHistorial(Date fechaHistorial){
 		for (int i = 0; i < historials.size(); i++) 
-			if (((Historial) historials.get(i)).getFechahistorial().compareTo(fechaHistorial) == 0)
+			if (((Historial) historials.get(i)).getFechahistorial().equals(fechaHistorial))
 				return (Historial) historials.get(i);
 		return null;
 	}
@@ -194,8 +206,8 @@ public class Gestion {
 		return logros;
 	}
 
-	public void removerRutina(int idRutina) {
-		rutinas.remove(idRutina);
+	public void removerRutina(Rutina rutina) {
+		rutinas.remove(rutina);
 	}
 
 	public void editarNivel(int idRutina, int nivel) {
@@ -220,20 +232,17 @@ public class Gestion {
 
 	public Rutina getRutina(int idRutina) {
 		for (int i = 0; i < rutinas.size(); i++) 
-			if (((Rutina) rutinas.get(i)).getIdRutina() == idRutina)
-				return (Rutina) rutinas.get(i);
+			if (rutinas.get(i).getIdRutina() == idRutina)
+				return rutinas.get(i);
 		return null;
 	}
 
-	public Tip tipEjercicio(int idEjercicio) {
-		ArrayList<Tip> lista = new ArrayList<Tip>();
-		for (int i = 0; i < tips.size(); i++)
-			if (((Tip) tips.get(i)).getidEjercicio() == idEjercicio)
-				lista.add(tips.get(i));
-		return (Tip) lista.get((int) (Math.random()*lista.size()));
-	}
-
-	public void addRutina() {
-		rutinas.add(new Rutina(rutinas.size(), new ArrayList<Ejercicio>()));
+	public boolean addRutina() {
+		if (rutinas.size() < 21) {
+			rutinas.add(new Rutina(rutinas.size(), new ArrayList<Ejercicio>()));
+			return true;
+		}
+		return false;
+		
 	}
 }

@@ -8,8 +8,7 @@ public class Logro implements Serializable{
 	private int puntajeLogro;
 	private Ejercicio ejercicio;
 	private boolean cumplido;
-	public Logro(int idLogro, String descripcionLogro, int puntajeLogro,
-			Ejercicio ejercicio) {
+	public Logro(int idLogro, String descripcionLogro, int puntajeLogro, Ejercicio ejercicio) {
 		super();
 		this.idLogro = idLogro;
 		this.descripcionLogro = descripcionLogro;
@@ -36,7 +35,6 @@ public class Logro implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return idLogro + "-"
-				+ descripcionLogro + " > " + puntajeLogro + " Eje: " + ejercicio;
+		return ""+ descripcionLogro + " > " + puntajeLogro + " Eje: " + ejercicio;
 	} 
 }

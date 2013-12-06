@@ -3,11 +3,11 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Historial implements Serializable{
-	private Date fechahistorial;
+	private String fechahistorial;
 	private int tiempoHistorrial;
 	private int puntajeHistorial;
 	private Ejercicio ejercicio;
-	public Historial(Date fechahistorial, int tiempo, int puntajeHistorial,
+	public Historial(String fechahistorial, int tiempo, int puntajeHistorial,
 			Ejercicio ejercicio) {
 		super();
 		this.fechahistorial = fechahistorial;
@@ -15,7 +15,7 @@ public class Historial implements Serializable{
 		this.puntajeHistorial = puntajeHistorial;
 		this.ejercicio = ejercicio;
 	}
-	public Date getFechahistorial() {
+	public String getFechahistorial() {
 		return fechahistorial;
 	}
 	public int getTiempoHistorrial() {
@@ -29,9 +29,9 @@ public class Historial implements Serializable{
 	}
 	@Override
 	public String toString() {
-		return fechahistorial 
-				+ ">" + tiempoHistorrial + "s >"
-				+ puntajeHistorial + " Ejer: " + ejercicio;
+		return "\n   "+fechahistorial
+				+ "\n   Duración ejercicio: " + tiempoHistorrial + "\n   Puntaje: "
+				+ puntajeHistorial + "\n   Ejercicio: " + ejercicio.getNombreEjercicio();
 	}
 
 }
